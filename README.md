@@ -1,2 +1,2 @@
 # GithubReposApp
-Swift application to try MVPP pattern an clean architecture
+Swift application to try MVPP pattern and clean architecture
