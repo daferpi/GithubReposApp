@@ -7,7 +7,7 @@ import Alamofire
 
 enum GithubApi {
     case listRepos
-    case detailRepo(repoId:String)
+    case detailRepo(owner:String, repositoryName:String)
 }
 
 extension GithubApi:ApiServiceConfiguration {
@@ -19,17 +19,15 @@ extension GithubApi:ApiServiceConfiguration {
         switch self {
         case .listRepos:
             return baseURL + "/repositories"
-        case .detailRepo(let repoId):
-            return baseURL + "/repos/" + repoId
+        case .detailRepo(let owner, let repositoryName):
+            return baseURL + "/repos/\(owner)/\(repositoryName)"
         }
     }
 
 
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .listRepos:
-            return .get
-        case .detailRepo(let repoId):
+        case .listRepos, .detailRepo(_, _):
             return .get
         }
     }
