@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DBDD6CAE2CEA72C0ED28E09 /* ListReposVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD81D5C0ECDFC72E302B8 /* ListReposVC.swift */; };
+		7DBDD94AA7D403247982B802 /* ListReposVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDD30808D6C13188343F16 /* ListReposVC.xib */; };
 		FFF28BD42122BAF400DA94F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */; };
-		FFF28BD62122BAF400DA94F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BD52122BAF400DA94F4 /* ViewController.swift */; };
-		FFF28BD92122BAF400DA94F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BD72122BAF400DA94F4 /* Main.storyboard */; };
 		FFF28BDB2122BAF600DA94F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */; };
 		FFF28BDE2122BAF600DA94F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDC2122BAF600DA94F4 /* LaunchScreen.storyboard */; };
 		FFF28BE92122BAF600DA94F4 /* GithubReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BE82122BAF600DA94F4 /* GithubReposAppTests.swift */; };
 		FFF28BF42122BAF600DA94F4 /* GithubReposAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BF32122BAF600DA94F4 /* GithubReposAppUITests.swift */; };
+		FFF28C182122D11A00DA94F4 /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
+		FFF28C192122D11A00DA94F4 /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
+		FFF28C1A2122D12D00DA94F4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
+		FFF28C1B2122D12D00DA94F4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
+		FFF28C1C2122D13300DA94F4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
+		FFF28C1D2122D13300DA94F4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
+		FFF28C1E2122D13800DA94F4 /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
+		FFF28C1F2122D13800DA94F4 /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
+		FFF28C202122D1AD00DA94F4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DBDD30808D6C13188343F16 /* ListReposVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListReposVC.xib; sourceTree = "<group>"; };
+		7DBDD81D5C0ECDFC72E302B8 /* ListReposVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListReposVC.swift; sourceTree = "<group>"; };
 		FFF28BD02122BAF400DA94F4 /* GithubReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFF28BD52122BAF400DA94F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFF28BD82122BAF400DA94F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF28BDD2122BAF600DA94F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFF28BDF2122BAF600DA94F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		FFF28BEF2122BAF600DA94F4 /* GithubReposAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF28BF32122BAF600DA94F4 /* GithubReposAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposAppUITests.swift; sourceTree = "<group>"; };
 		FFF28BF52122BAF600DA94F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF28C022122CE6900DA94F4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		FFF28C032122CE6900DA94F4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF28C202122D1AD00DA94F4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF28C1A2122D12D00DA94F4 /* Nimble.framework in Frameworks */,
+				FFF28C1B2122D12D00DA94F4 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +83,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF28C1C2122D13300DA94F4 /* Nimble.framework in Frameworks */,
+				FFF28C1D2122D13300DA94F4 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DBDD1A3D5C48713F5E1C410 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		7DBDD41118DF7FF7A1820B25 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		7DBDD5D1D4BE423E78E5EC5D /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDD41118DF7FF7A1820B25 /* entity */,
+				7DBDDC7258D3ADA9405CA74F /* services */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		7DBDD6E379B8ADFBEBD1DE04 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		7DBDD893A2B4C812A237C6E2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDD1A3D5C48713F5E1C410 /* network */,
+				7DBDD6E379B8ADFBEBD1DE04 /* repository */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		7DBDDA006AA397A47B464520 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDD81D5C0ECDFC72E302B8 /* ListReposVC.swift */,
+				7DBDD30808D6C13188343F16 /* ListReposVC.xib */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		7DBDDC7258D3ADA9405CA74F /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		7DBDDE51DC4111F5CBC80C1B /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDDA006AA397A47B464520 /* list */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
 		FFF28BC72122BAF400DA94F4 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +161,7 @@
 				FFF28BE72122BAF600DA94F4 /* GithubReposAppTests */,
 				FFF28BF22122BAF600DA94F4 /* GithubReposAppUITests */,
 				FFF28BD12122BAF400DA94F4 /* Products */,
+				FFF28C012122CE6900DA94F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +179,12 @@
 			isa = PBXGroup;
 			children = (
 				FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */,
-				FFF28BD52122BAF400DA94F4 /* ViewController.swift */,
-				FFF28BD72122BAF400DA94F4 /* Main.storyboard */,
 				FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */,
 				FFF28BDC2122BAF600DA94F4 /* LaunchScreen.storyboard */,
 				FFF28BDF2122BAF600DA94F4 /* Info.plist */,
+				7DBDD893A2B4C812A237C6E2 /* data */,
+				7DBDD5D1D4BE423E78E5EC5D /* domain */,
+				7DBDDE51DC4111F5CBC80C1B /* presentation */,
 			);
 			path = GithubReposApp;
 			sourceTree = "<group>";
@@ -125,6 +207,16 @@
 			path = GithubReposAppUITests;
 			sourceTree = "<group>";
 		};
+		FFF28C012122CE6900DA94F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */,
+				FFF28C022122CE6900DA94F4 /* Nimble.framework */,
+				FFF28C032122CE6900DA94F4 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +227,7 @@
 				FFF28BCC2122BAF400DA94F4 /* Sources */,
 				FFF28BCD2122BAF400DA94F4 /* Frameworks */,
 				FFF28BCE2122BAF400DA94F4 /* Resources */,
+				FFF28C212122D22600DA94F4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,7 +324,7 @@
 			files = (
 				FFF28BDE2122BAF600DA94F4 /* LaunchScreen.storyboard in Resources */,
 				FFF28BDB2122BAF600DA94F4 /* Assets.xcassets in Resources */,
-				FFF28BD92122BAF400DA94F4 /* Main.storyboard in Resources */,
+				7DBDD94AA7D403247982B802 /* ListReposVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF28C182122D11A00DA94F4 /* Nimble.framework in Resources */,
+				FFF28C192122D11A00DA94F4 /* Quick.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,18 +341,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF28C1E2122D13800DA94F4 /* Nimble.framework in Resources */,
+				FFF28C1F2122D13800DA94F4 /* Quick.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FFF28C212122D22600DA94F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFF28BCC2122BAF400DA94F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF28BD62122BAF400DA94F4 /* ViewController.swift in Sources */,
 				FFF28BD42122BAF400DA94F4 /* AppDelegate.swift in Sources */,
+				7DBDD6CAE2CEA72C0ED28E09 /* ListReposVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +407,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFF28BD72122BAF400DA94F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFF28BD82122BAF400DA94F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFF28BDC2122BAF600DA94F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,7 +538,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +561,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +585,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,6 +610,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,6 +634,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +658,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T652UKED3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GithubReposAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
