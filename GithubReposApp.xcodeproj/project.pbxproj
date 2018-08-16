@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7DBDD18A6FBB7C349717AE1E /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDCCC650DE098B7E055D6 /* ApiConstants.swift */; };
+		7DBDD2DF71339FE550EAB5ED /* GithubRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDBA77AF4C67D238DEC8A /* GithubRepositoryTest.swift */; };
+		7DBDD3B78E017A48F1A8A71A /* ListRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDDF43DA221791CB371739 /* ListRepos.json */; };
 		7DBDD415FFC3531225B44AB5 /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDC57B46FC6A1F20EFFE5 /* RepositoryOwner.swift */; };
 		7DBDD450613CAD55A57E5531 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDCF0C080152285029282 /* ApiError.swift */; };
 		7DBDD4D2A8570147AC06A4DA /* ApiExecutionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDFE6C7E295AFCFC24229 /* ApiExecutionService.swift */; };
@@ -20,7 +22,6 @@
 		FFF28BD42122BAF400DA94F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */; };
 		FFF28BDB2122BAF600DA94F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */; };
 		FFF28BDE2122BAF600DA94F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDC2122BAF600DA94F4 /* LaunchScreen.storyboard */; };
-		FFF28BE92122BAF600DA94F4 /* GithubReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BE82122BAF600DA94F4 /* GithubReposAppTests.swift */; };
 		FFF28BF42122BAF600DA94F4 /* GithubReposAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BF32122BAF600DA94F4 /* GithubReposAppUITests.swift */; };
 		FFF28C182122D11A00DA94F4 /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
 		FFF28C192122D11A00DA94F4 /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
@@ -31,6 +32,10 @@
 		FFF28C1E2122D13800DA94F4 /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C022122CE6900DA94F4 /* Nimble.framework */; };
 		FFF28C1F2122D13800DA94F4 /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFF28C032122CE6900DA94F4 /* Quick.framework */; };
 		FFF28C202122D1AD00DA94F4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */; };
+		FFFC05BB2125B706009EA886 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */; };
+		FFFC05BC2125B706009EA886 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */; };
+		FFFC05BD2125B725009EA886 /* OHHTTPStubs.framework in Resources */ = {isa = PBXBuildFile; fileRef = FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */; };
+		FFFC05BE2125B7C0009EA886 /* ListRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDDF43DA221791CB371739 /* ListRepos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +61,12 @@
 		7DBDD43BD3E0C635F5EBF021 /* GithubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		7DBDD503DD9E4FF5F61F8838 /* GithubApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
 		7DBDD81D5C0ECDFC72E302B8 /* ListReposVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListReposVC.swift; sourceTree = "<group>"; };
+		7DBDDBA77AF4C67D238DEC8A /* GithubRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositoryTest.swift; sourceTree = "<group>"; };
 		7DBDDC57B46FC6A1F20EFFE5 /* RepositoryOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryOwner.swift; sourceTree = "<group>"; };
 		7DBDDCCC650DE098B7E055D6 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		7DBDDCF0C080152285029282 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7DBDDD108A3133E9AD80B5AB /* ApiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		7DBDDF43DA221791CB371739 /* ListRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListRepos.json; sourceTree = "<group>"; };
 		7DBDDFE6C7E295AFCFC24229 /* ApiExecutionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiExecutionService.swift; sourceTree = "<group>"; };
 		FFF28BD02122BAF400DA94F4 /* GithubReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +74,6 @@
 		FFF28BDD2122BAF600DA94F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFF28BDF2122BAF600DA94F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF28BE42122BAF600DA94F4 /* GithubReposAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFF28BE82122BAF600DA94F4 /* GithubReposAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposAppTests.swift; sourceTree = "<group>"; };
 		FFF28BEA2122BAF600DA94F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF28BEF2122BAF600DA94F4 /* GithubReposAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF28BF32122BAF600DA94F4 /* GithubReposAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposAppUITests.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 		FFF28C022122CE6900DA94F4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		FFF28C032122CE6900DA94F4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFC05BB2125B706009EA886 /* OHHTTPStubs.framework in Frameworks */,
 				FFF28C1A2122D12D00DA94F4 /* Nimble.framework in Frameworks */,
 				FFF28C1B2122D12D00DA94F4 /* Quick.framework in Frameworks */,
 			);
@@ -99,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFC05BC2125B706009EA886 /* OHHTTPStubs.framework in Frameworks */,
 				FFF28C1C2122D13300DA94F4 /* Nimble.framework in Frameworks */,
 				FFF28C1D2122D13300DA94F4 /* Quick.framework in Frameworks */,
 			);
@@ -224,8 +233,9 @@
 		FFF28BE72122BAF600DA94F4 /* GithubReposAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				FFF28BE82122BAF600DA94F4 /* GithubReposAppTests.swift */,
+				7DBDDF43DA221791CB371739 /* ListRepos.json */,
 				FFF28BEA2122BAF600DA94F4 /* Info.plist */,
+				7DBDDBA77AF4C67D238DEC8A /* GithubRepositoryTest.swift */,
 			);
 			path = GithubReposAppTests;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 		FFF28C012122CE6900DA94F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */,
 				FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */,
 				FFF28C022122CE6900DA94F4 /* Nimble.framework */,
 				FFF28C032122CE6900DA94F4 /* Quick.framework */,
@@ -277,6 +288,7 @@
 				FFF28BE02122BAF600DA94F4 /* Sources */,
 				FFF28BE12122BAF600DA94F4 /* Frameworks */,
 				FFF28BE22122BAF600DA94F4 /* Resources */,
+				FFFC05B42125A660009EA886 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -366,6 +378,8 @@
 			files = (
 				FFF28C182122D11A00DA94F4 /* Nimble.framework in Resources */,
 				FFF28C192122D11A00DA94F4 /* Quick.framework in Resources */,
+				FFFC05BD2125B725009EA886 /* OHHTTPStubs.framework in Resources */,
+				7DBDD3B78E017A48F1A8A71A /* ListRepos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF28C1E2122D13800DA94F4 /* Nimble.framework in Resources */,
+				FFFC05BE2125B7C0009EA886 /* ListRepos.json in Resources */,
 				FFF28C1F2122D13800DA94F4 /* Quick.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +398,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		FFF28C212122D22600DA94F4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -391,9 +406,25 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		FFFC05B42125A660009EA886 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -419,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF28BE92122BAF600DA94F4 /* GithubReposAppTests.swift in Sources */,
+				7DBDD2DF71339FE550EAB5ED /* GithubRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +659,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubReposAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,6 +685,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubReposAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -677,6 +710,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubReposAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,6 +735,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubReposAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

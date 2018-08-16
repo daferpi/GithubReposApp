@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Repository {
+struct Repository:Decodable {
 
     let id:Int?
     let name:String?

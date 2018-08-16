@@ -7,19 +7,14 @@ import Foundation
 
 protocol GithubRepository {
 
-    func listRepositories() -> [Repository]
-    func detailRepository(owner:String, repoName:String) -> Repository
+    typealias CompletionHandlerList =  ([Repository]?, Error?) -> ()
+    typealias CompletionHandlerUnit =  (Repository?, Error?) -> ()
+    func listRepositories(completionHandler: @escaping CompletionHandlerList )
+    func detailRepository(owner:String, repoName:String, completionHandler: @escaping CompletionHandlerUnit)
 
 }
 
-extension GithubRepository {
-    static func create(apiClient:ApiExecutionService<GithubApi> = ApiExecutionService<GithubApi>()) -> GithubRepository {
-        return GithubRepositoryImpl(apiClient: apiClient)
-    }
-}
-
-
-private class GithubRepositoryImpl:GithubRepository {
+public class GithubRepositoryImpl:GithubRepository {
 
     private let apiClient:ApiExecutionService<GithubApi>
 
@@ -27,12 +22,37 @@ private class GithubRepositoryImpl:GithubRepository {
         self.apiClient = apiClient
     }
 
-    func listRepositories() -> [Repository] {
-        fatalError("listRepositories() has not been implemented")
+    func listRepositories(completionHandler: @escaping CompletionHandlerList ) {
+        apiClient.executeCall(apiEndpoint: .listRepos) { apiResult in
+            do {
+                switch apiResult {
+                case .success(_):
+                    let repositories = try apiResult.decode() as [Repository]
+                    completionHandler(repositories, nil)
+                case .failure(let apiError):
+                    completionHandler(nil, apiError)
+                }
+            } catch {
+                completionHandler(nil, ApiError.invalidCall(message: "Error obtaining data"))
+            }
+        }
     }
 
-    func detailRepository(owner: String, repoName: String) -> Repository {
-        fatalError("detailRepository(owner:repoName:) has not been implemented")
+    func detailRepository(owner:String, repoName:String, completionHandler: @escaping CompletionHandlerUnit) {
+        apiClient.executeCall(apiEndpoint: .detailRepo(owner: owner, repositoryName: repoName)) { (apiResult: ApiResult<Data, ApiError>) in
+
+            do {
+                switch apiResult {
+                case .success(_):
+                    let repository = try apiResult.decode() as Repository
+                    completionHandler(repository, nil)
+                case .failure(let apiError):
+                    completionHandler(nil, apiError)
+                }
+            } catch {
+                completionHandler(nil, ApiError.invalidCall(message: "Error obtaining data"))
+            }
+        }
     }
 
 }

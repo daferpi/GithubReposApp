@@ -28,17 +28,17 @@ public protocol ApiServiceConfiguration {
 
 public class ApiExecutionService<T: ApiServiceConfiguration> {
 
-    typealias Handler = (ApiResult<Any, ApiError>) -> Void
+    typealias Handler = (ApiResult<Data, ApiError>) -> Void
 
-    static func executeCall(apiEndpoint:T, completionHandler:@escaping Handler)  {
+    func executeCall(apiEndpoint:T, completionHandler:@escaping Handler)  {
 
         Alamofire
                 .request(apiEndpoint.path, method: apiEndpoint.method, parameters: apiEndpoint.parameters, encoding: apiEndpoint.parameterEncoding, headers: apiEndpoint.headers)
                 .validate()
-                .responseJSON {response in
+                .responseData {response in
                     switch response.result {
                     case .success(let data):
-                        completionHandler(.success(data))
+                       completionHandler(.success(data))
                     case .failure(let error):
                         completionHandler(.failure(ApiError.invalidCall(message: error.localizedDescription)))
                     }

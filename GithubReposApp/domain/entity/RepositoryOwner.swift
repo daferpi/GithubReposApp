@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct RepositoryOwner {
+struct RepositoryOwner:Decodable {
 
     let login:String?
     let id:Int?

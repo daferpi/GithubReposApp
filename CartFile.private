@@ -1,3 +1,4 @@
 #CartFile.private
 github "Quick/Quick"
 github "Quick/Nimble"
+github "AliSoftware/OHHTTPStubs"
