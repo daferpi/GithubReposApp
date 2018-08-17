@@ -34,7 +34,7 @@ class GithubInteractorTests:QuickSpec {
             
             context("when request list method is called") {
 
-                it("request return a valid list list") {
+                it("response return a valid list list") {
                     interactor.onListRepoSuccess = {repositories in
                         expect(repositories).toNot(beNil())
                         expect(repositories.count).to(equal(2))
@@ -42,7 +42,7 @@ class GithubInteractorTests:QuickSpec {
                     interactor.requestListRepo()
                 }
 
-                it("request return a valid list list") {
+                it("response return a valid list list") {
                     interactor = GithubInteractorImpl(repository: MockupRepo(responseResult: .empty))
                     interactor.onListRepoSuccess = {repositories in
                         expect(repositories).toNot(beNil())
@@ -52,13 +52,34 @@ class GithubInteractorTests:QuickSpec {
 
                 }
 
-                it("request return error") {
+                it("response return error") {
                     interactor = GithubInteractorImpl(repository: MockupRepo(responseResult: .error))
                     interactor.onError = {error in
                         expect(error).toNot(beNil())
                     }
                     interactor.requestListRepo()
 
+                }
+            }
+
+            context("when detail request method is called") {
+
+                it("response return a valid detail") {
+                    interactor.onDetailRepoSuccess = { repository in
+                        expect(repository).toNot(beNil())
+                        expect(repository.owner?.login).to(equal("owner1"))
+                        expect(repository.name).to(equal("repository1"))
+                    }
+
+                    interactor.requestDetailRepo(owner: "owner1", repoName: "repository1")
+                }
+
+                it("response return a error") {
+                    interactor = GithubInteractorImpl(repository: MockupRepo(responseResult: .error))
+                    interactor.onError = {error in
+                        expect(error).toNot(beNil())
+                    }
+                    interactor.requestDetailRepo(owner: "owner1", repoName: "repository1")
                 }
             }
         }
