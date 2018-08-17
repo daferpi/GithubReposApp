@@ -28,6 +28,9 @@ class GithubRepositoryTest:QuickSpec {
                 it("repository is not null") {
                     expect(repo).toNot(beNil())
                 }
+            }
+
+            context("when repository calls list repository method") {
 
                 it("check request not fails") {
 
@@ -39,11 +42,49 @@ class GithubRepositoryTest:QuickSpec {
                     waitUntil(timeout: 10) { done in
                         repo.listRepositories { repositories, error in
                             expect(repositories).toNot(beNil())
+                            expect(repositories).toNot(beEmpty())
+                            expect(error).to(beNil())
                             done()
                         }
                     }
 
                 }
+
+                it("check request when received wron json response") {
+
+                    stub(condition:isScheme("https") &&  isHost("api.github.com")) { _ in
+                        let stubPath = OHPathForFile("ListReposError.json", type(of: self))
+                        return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
+                    }
+
+                    waitUntil(timeout: 10) { done in
+                        repo.listRepositories { repositories, error in
+                            expect(repositories).to(beNil())
+                            expect(error).toNot(beNil())
+                            done()
+                        }
+                    }
+
+                }
+
+
+                it("check that when the API not have connection send error") {
+                    stub(condition:isScheme("https") &&  isHost("api.github.com")) { _ in
+                        let notConnectedError = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
+                        return OHHTTPStubsResponse(error:notConnectedError)
+                    }
+
+                    waitUntil(timeout: 10) { done in
+                        repo.listRepositories { repositories, error in
+                            expect(repositories).to(beNil())
+                            expect(error).toNot(beNil())
+                            done()
+                        }
+                    }
+
+                }
+
+
             }
         }
 
