@@ -7,8 +7,8 @@ import Foundation
 
 protocol GithubRepository {
 
-    typealias CompletionHandlerList =  ([Repository]?, Error?) -> ()
-    typealias CompletionHandlerUnit =  (Repository?, Error?) -> ()
+    typealias CompletionHandlerList =  ([Repository]?, ApiError?) -> ()
+    typealias CompletionHandlerUnit =  (Repository?, ApiError?) -> ()
     func listRepositories(completionHandler: @escaping CompletionHandlerList )
     func detailRepository(owner:String, repoName:String, completionHandler: @escaping CompletionHandlerUnit)
 
