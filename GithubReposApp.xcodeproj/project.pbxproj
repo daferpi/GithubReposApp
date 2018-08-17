@@ -10,7 +10,6 @@
 		7DBDD0112773CE0E9CFF45C0 /* DetailRepo.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDDC258D856F9895975126 /* DetailRepo.json */; };
 		7DBDD093B858712A279B3A77 /* DetailRepo.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDDC258D856F9895975126 /* DetailRepo.json */; };
 		7DBDD18A6FBB7C349717AE1E /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDCCC650DE098B7E055D6 /* ApiConstants.swift */; };
-		7DBDD2A04A6EE96FADD690B9 /* GithubInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDF4C5793F2B7656C67CD /* GithubInteractorTests.swift */; };
 		7DBDD2DF71339FE550EAB5ED /* GithubRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDBA77AF4C67D238DEC8A /* GithubRepositoryTest.swift */; };
 		7DBDD3B78E017A48F1A8A71A /* ListRepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDDF43DA221791CB371739 /* ListRepos.json */; };
 		7DBDD415FFC3531225B44AB5 /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDC57B46FC6A1F20EFFE5 /* RepositoryOwner.swift */; };
@@ -423,7 +422,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		FFF28C212122D22600DA94F4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -431,7 +430,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
@@ -486,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF28BF42122BAF600DA94F4 /* GithubReposAppUITests.swift in Sources */,
-				7DBDD2A04A6EE96FADD690B9 /* GithubInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

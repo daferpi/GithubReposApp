@@ -4,6 +4,27 @@
 //
 
 import Foundation
+import Quick
+import Nimble
 
-class GithubInteractorTests {
+@testable import GithubReposApp
+
+class GithubInteractorTests:QuickSpec {
+    
+    override func spec() {
+        var interactor:GithubInteractor!
+        
+        describe("test interactor") {
+            beforeEach {
+                interactor = GithubInteractorImpl()
+            }
+            
+            context("when interactor is create") {
+                it("interactor is not null") {
+                    expect(interactor).toNot(beNil())
+                }
+            }
+        }
+        
+    }
 }
