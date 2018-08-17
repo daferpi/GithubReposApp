@@ -31,6 +31,36 @@ class GithubInteractorTests:QuickSpec {
                     expect(interactor).toNot(beNil())
                 }
             }
+            
+            context("when request list method is called") {
+
+                it("request return a valid list list") {
+                    interactor.onListRepoSuccess = {repositories in
+                        expect(repositories).toNot(beNil())
+                        expect(repositories.count).to(equal(2))
+                    }
+                    interactor.requestListRepo()
+                }
+
+                it("request return a valid list list") {
+                    interactor = GithubInteractorImpl(repository: MockupRepo(responseResult: .empty))
+                    interactor.onListRepoSuccess = {repositories in
+                        expect(repositories).toNot(beNil())
+                        expect(repositories.isEmpty).to(beTrue())
+                    }
+                    interactor.requestListRepo()
+
+                }
+
+                it("request return error") {
+                    interactor = GithubInteractorImpl(repository: MockupRepo(responseResult: .error))
+                    interactor.onError = {error in
+                        expect(error).toNot(beNil())
+                    }
+                    interactor.requestListRepo()
+
+                }
+            }
         }
         
     }
