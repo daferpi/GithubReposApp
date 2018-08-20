@@ -18,7 +18,7 @@ protocol ListReposView {
 
 class ListReposVC: UIViewController {
 
-    var  doListRepoRequest:(() -> ())?
+    var doListRepoRequest:(() -> ())?
     var presenter:ListReposPresenter!
 
     private var repositoryList:[Repository]!

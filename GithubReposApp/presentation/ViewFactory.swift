@@ -10,8 +10,7 @@ class ViewFactory {
     static func createListRepoView() -> UIViewController {
         let interactor:GithubInteractor = GithubInteractorImpl()
         let view = ListReposVC(nibName: "ListReposVC", bundle: nil)
-        let presenter:ListReposPresenter = ListReposPresenter(view: view, interactor: interactor)
-        view.presenter = presenter
+        view.presenter = ListReposPresenter(view: view, interactor: interactor)
         return view
     }
 }
