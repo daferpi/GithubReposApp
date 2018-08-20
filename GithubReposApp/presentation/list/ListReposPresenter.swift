@@ -14,8 +14,6 @@ class ListReposPresenter {
         self.view = view
         self.interactor = interactor
 
-        self.view.doListRepoRequest = self.interactor.requestListRepo
-
         self.interactor.onListRepoSuccess = {[weak self] repositoryList in
             self?.view.onRepoSuccess(repositoryList: repositoryList)
         }
@@ -23,5 +21,8 @@ class ListReposPresenter {
         self.interactor.onError = { [weak self] error in
             self?.view.onError(error: error)
         }
+
+        self.view.doListRepoRequest = self.interactor.requestListRepo
+
     }
 }
