@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let listReposViewController = ListReposVC(nibName: "ListReposVC", bundle: nil)
+        let listReposViewController = ViewFactory.createListRepoView()
         window?.rootViewController = listReposViewController
         window?.makeKeyAndVisible()
         return true
