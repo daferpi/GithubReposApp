@@ -81,7 +81,7 @@ class MockupGithubInteractor:GithubInteractor {
 
     var onListRepoSuccess: (([Repository]) -> ())?
     var onError: ((ApiError?) -> ())?
-    var onDetailRepoSuccess: ((Repository) -> ())?
+    var onDetailRepoSuccess: ((RepositoryDetail) -> ())?
 
     private var requestListCalled:Bool = false
     private var requestDetailRepoCalled:Bool = false

@@ -8,7 +8,7 @@ import Foundation
 protocol GithubRepository {
 
     typealias CompletionHandlerList =  ([Repository]?, ApiError?) -> ()
-    typealias CompletionHandlerUnit =  (Repository?, ApiError?) -> ()
+    typealias CompletionHandlerUnit =  (RepositoryDetail?, ApiError?) -> ()
     func listRepositories(completionHandler: @escaping CompletionHandlerList )
     func detailRepository(owner:String, repoName:String, completionHandler: @escaping CompletionHandlerUnit)
 
@@ -44,7 +44,7 @@ public class GithubRepositoryImpl:GithubRepository {
             do {
                 switch apiResult {
                 case .success(_):
-                    let repository = try apiResult.decode() as Repository
+                    let repository = try apiResult.decode() as RepositoryDetail
                     completionHandler(repository, nil)
                 case .failure(let apiError):
                     completionHandler(nil, apiError)

@@ -13,13 +13,13 @@ protocol DetailsRepoView {
     var repoName:String {get set}
     var doDetailsRepo:((_ owner:String,  _ repoName:String) -> ())? { get set }
     func onError(error:ApiError?)
-    func onDetailsSuccess(repository:Repository)
+    func onDetailsSuccess(repository:RepositoryDetail)
 }
 
 class DetailsRepoVC: UIViewController {
 
-    var owner:String!
-    var repoName:String!
+    var owner:String
+    var repoName:String
     var doDetailsRepo: ((String, String) -> ())?
     var presenter:DetailsRepoPresenter!
 
@@ -42,7 +42,7 @@ class DetailsRepoVC: UIViewController {
 
 extension DetailsRepoVC:DetailsRepoView {
 
-    func onDetailsSuccess(repository: Repository) {
+    func onDetailsSuccess(repository: RepositoryDetail) {
     }
 
     func onError(error: ApiError?) {

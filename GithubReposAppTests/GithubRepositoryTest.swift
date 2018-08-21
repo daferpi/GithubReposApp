@@ -52,7 +52,7 @@ class GithubRepositoryTest:QuickSpec {
 
                 }
 
-                it("check request when received wron json response") {
+                it("check request when received bad json response") {
 
                     stub(condition:isScheme("https") &&  isHost("api.github.com")) { _ in
                         let stubPath = OHPathForFile("ListReposError.json", type(of: self))

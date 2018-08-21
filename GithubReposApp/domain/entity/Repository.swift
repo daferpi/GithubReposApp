@@ -11,6 +11,5 @@ struct Repository:Decodable {
     let name:String?
     let full_name:String?
     let owner:RepositoryOwner?
-    let url:String?
     let description:String?
 }

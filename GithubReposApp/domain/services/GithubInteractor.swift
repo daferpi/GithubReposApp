@@ -14,7 +14,7 @@ protocol GithubInteractor {
     
     // detail repo methods
     func requestDetailRepo(owner:String, repoName:String)
-    var onDetailRepoSuccess:((Repository) -> ())? { get set}
+    var onDetailRepoSuccess:((RepositoryDetail) -> ())? { get set}
 }
 
 public class GithubInteractorImpl:GithubInteractor {
@@ -22,7 +22,7 @@ public class GithubInteractorImpl:GithubInteractor {
     private var repository:GithubRepository!
     
     var onListRepoSuccess:(([Repository]) -> ())?
-    var onDetailRepoSuccess:((Repository) -> ())?
+    var onDetailRepoSuccess:((RepositoryDetail) -> ())?
     var onError:((ApiError?) -> ())?
     
     init(repository:GithubRepository = GithubRepositoryImpl()) {

@@ -109,7 +109,7 @@ class MockupRepo: GithubRepository {
     func detailRepository(owner:String, repoName:String, completionHandler: @escaping CompletionHandlerUnit) {
         switch result {
         case .success:
-            let repository = self.createRepository(index: 1)
+            let repository = self.createRepositoryDetail(index: 1)
             completionHandler(repository, nil)
         case .error:
             completionHandler(nil, ApiError.invalidCall(message: "error"))
@@ -129,7 +129,13 @@ class MockupRepo: GithubRepository {
     
     private func createRepository(index:Int) -> Repository {
         let repositoryOwner = RepositoryOwner(login: "owner\(index)", id: index, avatar_url: "http://avatarUrl\(index).com", url: "http://Url\(index).com")
-        let repository = Repository(id: index, name: "repository\(index)", full_name: "repositoryFullName\(index)", owner: repositoryOwner, url: "http://url\(index)", description: "description\(index)")
+        let repository = Repository(id: index, name: "repository\(index)", full_name: "repositoryFullName\(index)", owner: repositoryOwner, description: "description\(index)")
         return repository
+    }
+
+    private func createRepositoryDetail(index:Int) -> RepositoryDetail {
+        let repositoryOwner = RepositoryOwner(login: "owner\(index)", id: index, avatar_url: "http://avatarUrl\(index).com", url: "http://Url\(index).com")
+        let repositoryDetail = RepositoryDetail(name: "repository\(index)", full_name: "repositoryFullName\(index)", owner: repositoryOwner, description: "description\(index)", html_url: "http://url\(index)", created_at: "createAt\(index)", forks_count: index, open_issues: index, subscribers_count: index, watchers_count: index)
+        return repositoryDetail
     }
 }
