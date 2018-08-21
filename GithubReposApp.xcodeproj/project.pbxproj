@@ -31,6 +31,9 @@
 		7DBDDF38B813DA7FA871435E /* LisReposPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDBAF104631F8229385D7 /* LisReposPresenterTests.swift */; };
 		7DBDDF5D6FE62894C75765ED /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD503DD9E4FF5F61F8838 /* GithubApi.swift */; };
 		7DBDDF95B154CE12F58CB04E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD1D5D8984D6305673381 /* Repository.swift */; };
+		FF1FD340212BFC5600E5D3D0 /* ListRepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FD33E212BFC5600E5D3D0 /* ListRepoViewCell.swift */; };
+		FF1FD341212BFC5600E5D3D0 /* ListRepoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF1FD33F212BFC5600E5D3D0 /* ListRepoViewCell.xib */; };
+		FF1FD343212C0B7E00E5D3D0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1FD342212C0B7E00E5D3D0 /* AlamofireImage.framework */; };
 		FFF28BD42122BAF400DA94F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */; };
 		FFF28BDB2122BAF600DA94F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */; };
 		FFF28BDE2122BAF600DA94F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF28BDC2122BAF600DA94F4 /* LaunchScreen.storyboard */; };
@@ -88,6 +91,9 @@
 		7DBDDF43DA221791CB371739 /* ListRepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListRepos.json; sourceTree = "<group>"; };
 		7DBDDF4C5793F2B7656C67CD /* GithubInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubInteractorTests.swift; sourceTree = "<group>"; };
 		7DBDDFE6C7E295AFCFC24229 /* ApiExecutionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiExecutionService.swift; sourceTree = "<group>"; };
+		FF1FD33E212BFC5600E5D3D0 /* ListRepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepoViewCell.swift; sourceTree = "<group>"; };
+		FF1FD33F212BFC5600E5D3D0 /* ListRepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRepoViewCell.xib; sourceTree = "<group>"; };
+		FF1FD342212C0B7E00E5D3D0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		FFF28BD02122BAF400DA94F4 /* GithubReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF28BD32122BAF400DA94F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFF28BDA2122BAF600DA94F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF28C202122D1AD00DA94F4 /* Alamofire.framework in Frameworks */,
+				FF1FD343212C0B7E00E5D3D0 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +204,7 @@
 				7DBDD81D5C0ECDFC72E302B8 /* ListReposVC.swift */,
 				7DBDD30808D6C13188343F16 /* ListReposVC.xib */,
 				7DBDD17D8D5B1B36156D9F71 /* ListReposPresenter.swift */,
+				7DBDDECA1627551572A7D5B5 /* cells */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -216,6 +224,15 @@
 				7DBDDA0EE959667E9B78DA4C /* ViewFactory.swift */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		7DBDDECA1627551572A7D5B5 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF1FD33E212BFC5600E5D3D0 /* ListRepoViewCell.swift */,
+				FF1FD33F212BFC5600E5D3D0 /* ListRepoViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		FFF28BC72122BAF400DA94F4 = {
@@ -280,6 +297,7 @@
 		FFF28C012122CE6900DA94F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF1FD342212C0B7E00E5D3D0 /* AlamofireImage.framework */,
 				FFFC05BA2125B706009EA886 /* OHHTTPStubs.framework */,
 				FFF28C0C2122CEDC00DA94F4 /* Alamofire.framework */,
 				FFF28C022122CE6900DA94F4 /* Nimble.framework */,
@@ -396,6 +414,7 @@
 			files = (
 				FFF28BDE2122BAF600DA94F4 /* LaunchScreen.storyboard in Resources */,
 				FFF28BDB2122BAF600DA94F4 /* Assets.xcassets in Resources */,
+				FF1FD341212BFC5600E5D3D0 /* ListRepoViewCell.xib in Resources */,
 				7DBDD94AA7D403247982B802 /* ListReposVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +456,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);
@@ -477,6 +497,7 @@
 				7DBDDF95B154CE12F58CB04E /* Repository.swift in Sources */,
 				7DBDD415FFC3531225B44AB5 /* RepositoryOwner.swift in Sources */,
 				7DBDDD32A40D26A695709CFB /* GithubRepository.swift in Sources */,
+				FF1FD340212BFC5600E5D3D0 /* ListRepoViewCell.swift in Sources */,
 				7DBDD9B9E8261DC51FF42E02 /* GithubInteractor.swift in Sources */,
 				7DBDD1FCF0AA273346ACD435 /* ListReposPresenter.swift in Sources */,
 				7DBDD8F3A0ACFD89997324FA /* ViewFactory.swift in Sources */,

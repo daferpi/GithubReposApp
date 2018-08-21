@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="cellId" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="ListRepoViewCell" customModule="GithubReposApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="481" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mof-O8-MgL">
+                        <rect key="frame" x="12" y="12" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="B7Q-pH-Rh8"/>
+                            <constraint firstAttribute="width" constant="64" id="Uk4-tn-ViI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdM-uQ-3cA" userLabel="nameRepoLbl">
+                        <rect key="frame" x="86" y="12" width="389" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="text that is a large test to validate that the field contains all valid information" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-tf-3Qa" userLabel="descriptionRepoLbl">
+                        <rect key="frame" x="86" y="32.5" width="389" height="103.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HiQ-tf-3Qa" firstAttribute="leading" secondItem="mof-O8-MgL" secondAttribute="trailing" constant="10" id="2KH-lN-QYg"/>
+                    <constraint firstItem="mof-O8-MgL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Bdd-ho-4RC"/>
+                    <constraint firstAttribute="bottom" secondItem="HiQ-tf-3Qa" secondAttribute="bottom" constant="10" id="RX5-bS-3jL"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mof-O8-MgL" secondAttribute="bottom" constant="5" id="aTS-J6-GzN"/>
+                    <constraint firstItem="HiQ-tf-3Qa" firstAttribute="top" secondItem="MdM-uQ-3cA" secondAttribute="bottom" id="ahv-pO-mWD"/>
+                    <constraint firstItem="MdM-uQ-3cA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="eIg-cr-gfa"/>
+                    <constraint firstItem="MdM-uQ-3cA" firstAttribute="leading" secondItem="mof-O8-MgL" secondAttribute="trailing" constant="10" id="hie-hM-3Bt"/>
+                    <constraint firstItem="mof-O8-MgL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="jVs-lU-og8"/>
+                    <constraint firstAttribute="trailing" secondItem="MdM-uQ-3cA" secondAttribute="trailing" constant="6" id="jvf-2B-pt6"/>
+                    <constraint firstAttribute="trailing" secondItem="HiQ-tf-3Qa" secondAttribute="trailing" constant="6" id="rA0-fr-kiD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="imageRepo" destination="mof-O8-MgL" id="mGu-l7-tZR"/>
+                <outlet property="labelDescriptionRepo" destination="HiQ-tf-3Qa" id="lwd-hz-9cP"/>
+                <outlet property="labelNameRepo" destination="MdM-uQ-3cA" id="nT5-aP-I7T"/>
+            </connections>
+            <point key="canvasLocation" x="-146" y="-37"/>
+        </tableViewCell>
+    </objects>
+</document>

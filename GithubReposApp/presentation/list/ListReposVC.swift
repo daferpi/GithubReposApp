@@ -38,8 +38,10 @@ class ListReposVC: UIViewController {
 
     private func setupView() {
         self.repositoryList = [Repository]()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        self.tableView.register(UINib(nibName: "ListRepoViewCell", bundle: nil), forCellReuseIdentifier: "cellId")
         self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = tableView.rowHeight
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.view = self.tableView
     }
 
@@ -92,8 +94,8 @@ extension ListReposVC:UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewCell(tableView: tableView, reuseIdentifier: "cellId")
-        cell.textLabel?.text = self.repositoryList[indexPath.row].full_name
+        let cell = tableViewCell(tableView: tableView, reuseIdentifier: "cellId") as! ListRepoViewCell
+        cell.repoData = repositoryList[indexPath.row]
         return cell
     }
 

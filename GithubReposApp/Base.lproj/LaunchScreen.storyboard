@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-tg-F1b">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="OlL-fN-vDT"/>
+                                    <constraint firstAttribute="width" constant="240" id="RoQ-4m-fc6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8ep-tg-F1b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EBP-vN-Or6"/>
+                            <constraint firstItem="8ep-tg-F1b" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wqB-NM-U1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-1024.png" width="16" height="16"/>
+    </resources>
 </document>
