@@ -53,7 +53,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <inset key="separatorInset" minX="85" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <inset key="separatorInset" minX="85" minY="0.0" maxX="6" maxY="0.0"/>
             <connections>
                 <outlet property="imageRepo" destination="mof-O8-MgL" id="mGu-l7-tZR"/>
                 <outlet property="labelDescriptionRepo" destination="HiQ-tf-3Qa" id="lwd-hz-9cP"/>
