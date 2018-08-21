@@ -13,4 +13,13 @@ class ViewFactory {
         view.presenter = ListReposPresenter(view: view, interactor: interactor)
         return view
     }
+
+    static func createDetailRepoView(owner:String, repoName:String) -> UIViewController {
+        let interactor:GithubInteractor = GithubInteractorImpl()
+        let view = DetailsRepoVC(owner: owner, repoName: repoName)
+        view.presenter = DetailsRepoPresenter(view: view, interactor: interactor)
+        return view
+    }
 }
+
+
