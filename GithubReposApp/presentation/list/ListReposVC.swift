@@ -40,6 +40,7 @@ class ListReposVC: UIViewController {
         self.repositoryList = [Repository]()
         self.tableView.register(UINib(nibName: "ListRepoViewCell", bundle: nil), forCellReuseIdentifier: "cellId")
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.estimatedRowHeight = tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.view = self.tableView
@@ -87,7 +88,7 @@ extension ListReposVC:ListReposView {
 
 }
 
-extension ListReposVC:UITableViewDataSource {
+extension ListReposVC:UITableViewDataSource, UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.repositoryList.count
@@ -106,4 +107,16 @@ extension ListReposVC:UITableViewDataSource {
             return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let repository = repositoryList[indexPath.row]
+
+        guard let owner = repository.owner?.login, let repoName = repository.name else { return }
+
+        let router = GithubRepoRouter(navigationController: self.navigationController)
+        router.route(to: .detailRepos(owner: owner, repoName: repoName))
+    }
 }
+
+

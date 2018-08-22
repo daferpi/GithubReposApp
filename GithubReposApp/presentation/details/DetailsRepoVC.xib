@@ -12,7 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsRepoVC" customModule="GithubReposApp" customModuleProvider="target">
             <connections>
+                <outlet property="labelCreatAtTitle" destination="AdY-rq-1AD" id="4oA-IE-KVB"/>
+                <outlet property="labelCreateAtValue" destination="3l8-go-5ht" id="cWx-j7-iaB"/>
+                <outlet property="labelDescription" destination="YdJ-Ue-hNB" id="loN-DN-QJu"/>
+                <outlet property="labelForkCountTitle" destination="jBK-aX-v77" id="Ghw-9Y-xEo"/>
+                <outlet property="labelForkCountValue" destination="eok-tp-EDh" id="Fmh-id-H73"/>
+                <outlet property="labelOpenIssuesTitle" destination="Ymo-2h-85B" id="pJv-He-WPC"/>
+                <outlet property="labelOpenIssuesValue" destination="lhw-Em-gjR" id="VLu-Yv-lGF"/>
+                <outlet property="labelOwner" destination="jBf-xg-z6k" id="gpJ-4c-Ryi"/>
+                <outlet property="labelRepoName" destination="jw2-D2-bbr" id="t2k-iV-7vf"/>
+                <outlet property="labelSubscribersTitle" destination="knE-9g-sWq" id="gXP-1N-qqT"/>
+                <outlet property="labelSubscribersValue" destination="d8c-FK-bS6" id="pul-b8-HXb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webViewRepo" destination="2d9-L8-Izv" id="Z5P-RK-0Sr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -144,7 +156,7 @@
                     <rect key="frame" x="16" y="246" width="343" height="347"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="347" id="6VO-1c-yuA"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="347" id="6VO-1c-yuA"/>
                     </constraints>
                 </webView>
             </subviews>
