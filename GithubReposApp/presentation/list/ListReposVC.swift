@@ -48,6 +48,8 @@ class ListReposVC: UIViewController {
 
     private func showErrorMessage(message:String?) {
         let alert = UIAlertController(title: "Warning", message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(defaultAction)
         self.present(alert, animated: true)
     }
 
